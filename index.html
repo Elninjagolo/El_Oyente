@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias Express</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
+    <header>
+        <div class="logo">
+            <h1>Noticias Express</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Internacional</a></li>
+                <li><a href="#">Tecnología</a></li>
+                <li><a href="#">Deportes</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main id="news-container">
+            <!-- La noticia destacada se genera en HTML estático -->
+            <article class="featured-news">
+                <img src="https://placehold.co/800x400/eeeeee/999999?text=Noticia+Destacada" alt="Imagen destacada">
+                <div class="news-content">
+                    <span class="category">Última Hora</span>
+                    <h2>El futuro de la inteligencia artificial en la vida cotidiana</h2>
+                    <p>Descubre cómo los nuevos modelos de lenguaje están transformando la manera en que trabajamos, estudiamos y nos comunicamos a diario...</p>
+                    <a href="#" class="read-more">Leer más</a>
+                </div>
+            </article>
+
+            <!-- Las noticias secundarias se cargarán con JavaScript -->
+            <div class="news-grid" id="news-grid">
+                <!-- El contenido se inyecta aquí -->
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <h3>Lo más leído</h3>
+            <ul class="trending-list">
+                <li><a href="#">Los mercados cierran al alza tras los nuevos anuncios.</a></li>
+                <li><a href="#">Resultados de la jornada de Champions League.</a></li>
+                <li><a href="#">Nueva misión espacial planea llegar a Marte en 2030.</a></li>
+                <li><a href="#">Descubren nueva especie de ave en el Amazonas.</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Noticias Express. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
