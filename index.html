@@ -3,60 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias Express</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Noticia: Intento de tiroteo frustrado</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <h1>Noticias El Oyente</h1>
+            <a href="index.html" style="color: white; text-decoration: none;"><h1>Noticias Express</h1></a>
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
                 <li><a href="#">Internacional</a></li>
-                <li><a href="#">Tecnología</a></li>
-                <li><a href="#">Deportes</a></li>
+                <li><a href="#">Seguridad</a></li>
+                <li><a href="#">Últimas Noticias</a></li>
             </ul>
-            <button class="menu-toggle" id="menuToggle">☰</button>
         </nav>
     </header>
 
-    <div class="container">
-        <main id="news-container">
-            <!-- La noticia destacada se genera en HTML estático -->
-            <article class="featured-news">
-                <img src="l18.jpg" alt="Imagen destacada">
-                <div class="news-content">
-                    <span class="category">Última Hora</span>
-                    <h2>El futuro de la inteligencia artificial en la vida cotidiana</h2>
-                    <p>Descubre cómo los nuevos modelos de lenguaje están transformando la manera en que trabajamos, estudiamos y nos comunicamos a diario...</p>
-                    <a href="#" class="read-more">Leer más</a>
-                </div>
-            </article>
+    <article class="article-container">
+        <header class="article-header">
+            <span class="category-tag">Seguridad</span>
+            <h1>Frustran una masacre: Detienen a un hombre armado antes de ingresar a un centro comercial</h1>
+            <p class="article-meta">Por **Redacción Noticias Express** | Publicado el 8 de mayo de 2026</p>
+        </header>
 
-            <!-- Las noticias secundarias se cargarán con JavaScript -->
-            <div class="news-grid" id="news-grid">
-                <!-- El contenido se inyecta aquí -->
-            </div>
-        </main>
+        <img src="img/operativo-policial.jpg" alt="Operativo policial en la escena" class="main-image">
 
-        <aside class="sidebar">
-            <h3>Lo más leído</h3>
-            <ul class="trending-list">
-                <li><a href="#">Los mercados cierran al alza tras los nuevos anuncios.</a></li>
-                <li><a href="#">Resultados de la jornada de Champions League.</a></li>
-                <li><a href="#">Nueva misión espacial planea llegar a Marte en 2030.</a></li>
-                <li><a href="#">Descubren nueva especie de ave en el Amazonas.</a></li>
-            </ul>
-        </aside>
-    </div>
+        <div class="article-content">
+            <p class="lead">
+                Una tragedia de proporciones mayores fue evitada esta tarde gracias a la rápida intervención de las fuerzas de seguridad y la alerta temprana de un ciudadano.
+            </p>
+
+            <p>
+                Cerca de las 14:30 horas, las autoridades recibieron un reporte sobre un individuo que portaba un arma larga en el estacionamiento del centro comercial "Plaza Norte". Según los primeros informes, el sospechoso se dirigía hacia la entrada principal con intenciones de abrir fuego.
+            </p>
+
+            <p>
+                Agentes de la unidad de respuesta rápida que se encontraban patrullando la zona lograron interceptar al sujeto apenas unos metros antes de que cruzara las puertas automáticas. Tras una breve persecución a pie, el individuo fue reducido sin que se efectuara un solo disparo.
+            </p>
+
+            <blockquote>
+                "La coordinación entre la denuncia ciudadana y nuestro equipo de respuesta evitó lo que pudo ser un día oscuro para nuestra comunidad", declaró el jefe de policía local en rueda de prensa.
+            </p>
+
+            <p>
+                En el vehículo del detenido se hallaron municiones adicionales y material propagandístico que ya está siendo analizado por las unidades de inteligencia. Hasta el momento, el centro comercial permanece cerrado mientras se realizan los peritajes correspondientes.
+            </p>
+        </div>
+    </article>
 
     <footer>
-        <p>&copy; 2026 El Oyente. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Noticias Express. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="page.js"></script>
 </body>
 </html>
