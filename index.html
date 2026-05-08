@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticia de Última Hora | Noticias Express</title>
     
-    <!-- CSS INTEGRADO -->
+    <!-- CSS: Estilos de la página -->
     <style>
         :root {
-            --primary-color: #1a1a1a;
-            --accent-color: #d32f2f;
-            --text-main: #222;
-            --text-meta: #666;
+            --primary-color: #1a1a1a;   /* Negro periódico */
+            --accent-color: #d32f2f;    /* Rojo alerta */
+            --text-main: #222;          /* Texto principal */
+            --text-meta: #666;          /* Texto secundario */
             --bg-body: #ffffff;
         }
 
@@ -28,7 +28,7 @@
             line-height: 1.8;
         }
 
-        /* Navegación */
+        /* --- ENCABEZADO --- */
         header {
             background-color: var(--primary-color);
             color: white;
@@ -56,9 +56,14 @@
             color: white;
             text-decoration: none;
             font-size: 0.9rem;
+            transition: 0.3s;
         }
 
-        /* Contenedor del Artículo */
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- CUERPO DEL ARTÍCULO --- */
         .article-container {
             max-width: 800px;
             margin: 40px auto;
@@ -103,6 +108,7 @@
             height: auto;
             border-radius: 4px;
             display: block;
+            background-color: #eee;
         }
 
         .image-caption {
@@ -110,10 +116,9 @@
             font-size: 0.85rem;
             color: #777;
             margin-top: 8px;
-            text-align: left;
         }
 
-        /* Cuerpo del texto */
+        /* Contenido de texto */
         .article-content p {
             margin-bottom: 25px;
             font-size: 1.25rem;
@@ -135,7 +140,7 @@
             font-size: 1.3rem;
         }
 
-        /* Footer */
+        /* --- PIE DE PÁGINA --- */
         footer {
             text-align: center;
             padding: 50px 20px;
@@ -146,22 +151,18 @@
             color: #666;
         }
 
-        /* Adaptabilidad para móviles */
+        /* --- DISEÑO RESPONSIVO (MÓVILES) --- */
         @media (max-width: 600px) {
-            .article-header h1 {
-                font-size: 2rem;
-            }
-            header {
-                padding: 1rem 5%;
-            }
-            nav {
-                display: none; /* Oculta menú en móvil para este ejemplo */
-            }
+            header { padding: 1rem 5%; flex-direction: column; gap: 10px; }
+            .article-header h1 { font-size: 2rem; }
+            .article-container { margin: 20px auto; }
+            nav ul { font-size: 0.8rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- ESTRUCTURA HTML -->
     <header>
         <div class="logo">
             <h1>Noticias Express</h1>
@@ -170,22 +171,22 @@
             <ul>
                 <li><a href="#">Sucesos</a></li>
                 <li><a href="#">Política</a></li>
-                <li><a href="#">Mundo</a></li>
+                <li><a href="#">Internacional</a></li>
             </ul>
         </nav>
     </header>
 
     <article class="article-container">
         <header class="article-header">
-            <span class="category-tag">Último Minuto</span>
+            <span class="category-tag">Última Hora</span>
             <h1>Frustran una masacre: Detienen a un hombre armado antes de ingresar a un centro comercial</h1>
-            <p class="article-meta">Por <strong>Javier Méndez</strong> | Publicado el 8 de mayo de 2026</p>
+            <p class="article-meta">Por <strong>Redacción Noticias Express</strong> | Publicado el 8 de mayo de 2026</p>
         </header>
 
         <div class="image-wrapper">
-            <!-- Reemplaza "img/policia.jpg" con tu archivo local -->
-            <img src="https://placehold.co/1200x700/333/fff?text=Operativo+Policial+en+Escena" alt="Policía en la escena" class="main-image">
-            <p class="image-caption">Agentes de la unidad táctica resguardan el perímetro tras la detención del sospechoso.</p>
+            <!-- NOTA: Reemplaza este enlace por el nombre de tu foto local si lo prefieres -->
+            <img src="https://placehold.co/1200x700/333/fff?text=Operativo+Policial" alt="Policía en la escena" class="main-image">
+            <p class="image-caption">Agentes de la unidad táctica asegurando el perímetro tras la exitosa detención.</p>
         </div>
 
         <div class="article-content">
@@ -194,38 +195,39 @@
             </p>
 
             <p>
-                Cerca de las 14:30 horas de este viernes, las autoridades locales recibieron un reporte de emergencia sobre un individuo que portaba un arma larga en el estacionamiento del concurrido centro comercial <strong>"Plaza Norte"</strong>. Según testigos, el sospechoso caminaba con determinación hacia la entrada principal.
+                Cerca de las 14:30 horas, las autoridades locales recibieron un reporte de emergencia sobre un individuo que portaba un arma larga en el estacionamiento del concurrido centro comercial <strong>"Plaza Norte"</strong>. El sospechoso caminaba con determinación hacia la puerta de acceso sur.
             </p>
 
             <p>
-                Agentes de la patrulla urbana, que se encontraban a escasos dos minutos del lugar, lograron interceptar al sujeto antes de que lograra cruzar las puertas automáticas del establecimiento. El sospechoso, cuya identidad no ha sido revelada, fue reducido mediante tácticas de desescalada sin que se registraran disparos ni heridos.
+                Agentes que patrullaban el sector lograron interceptar al sujeto apenas unos metros antes de su entrada al recinto. El individuo fue reducido sin disparos y trasladado inmediatamente a dependencias policiales para ser interrogado.
             </p>
 
             <blockquote>
-                "El tiempo de respuesta fue vital. Estamos hablando de una intervención que salvó decenas de vidas en cuestión de segundos", señaló el comisario general durante una breve declaración a los medios.
+                "La coordinación entre la denuncia ciudadana y nuestro equipo de respuesta evitó lo que pudo ser un día trágico para cientos de familias", declaró el jefe de policía en rueda de prensa.
             </blockquote>
 
             <p>
-                Tras la detención, los equipos de especialistas en explosivos registraron el vehículo del sospechoso, donde se encontraron varios cargadores de alta capacidad y una nota con planes detallados sobre el ataque. La zona permanece acordonada mientras se completa la investigación.
-            </p>
-
-            <p>
-                El centro comercial ha emitido un comunicado agradeciendo la labor policial y anunciando que reabrirá sus puertas el día de mañana bajo estrictos protocolos de seguridad reforzados.
+                En la inspección posterior de su vehículo, se hallaron múltiples cargadores y planes escritos que ya están bajo análisis de inteligencia. El centro comercial se mantiene cerrado temporalmente para facilitar las investigaciones.
             </p>
         </div>
     </article>
 
     <footer>
-        <p>&copy; 2026 Noticias Express - Periodismo en Tiempo Real.</p>
-        <p>Prohibida la reproducción total o parcial de este contenido.</p>
+        <p>&copy; 2026 Noticias Express - Periodismo Independiente.</p>
+        <p>Todos los derechos reservados.</p>
     </footer>
 
-    <!-- JAVASCRIPT INTEGRADO -->
+    <!-- JAVASCRIPT: Funcionalidad -->
     <script>
-        // Función simple para avisar que la noticia está actualizada
-        window.onload = () => {
-            console.log("Artículo cargado correctamente. Estado: Actualizado.");
-        };
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Sistema de noticias cargado correctamente.");
+            
+            // Ejemplo de funcionalidad: Mostrar una pequeña alerta de 'Última Hora' al entrar
+            setTimeout(() => {
+                const confirms = confirm("¿Deseas recibir notificaciones sobre el desarrollo de esta noticia?");
+                if(confirms) console.log("Usuario aceptó notificaciones.");
+            }, 2000);
+        });
     </script>
 </body>
 </html>
