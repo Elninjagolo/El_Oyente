@@ -3,59 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticia: Intento de tiroteo frustrado</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Noticia de Última Hora | Noticias Express</title>
+    
+    <!-- CSS INTEGRADO -->
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #d32f2f;
+            --text-main: #222;
+            --text-meta: #666;
+            --bg-body: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+
+        /* Navegación */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* Contenedor del Artículo */
+        .article-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .category-tag {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 4px 10px;
+            font-size: 0.8rem;
+            font-family: Arial, sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .article-header h1 {
+            font-size: 2.8rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .article-meta {
+            font-family: Arial, sans-serif;
+            color: var(--text-meta);
+            font-size: 0.9rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* Imágenes */
+        .image-wrapper {
+            margin-bottom: 30px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .image-caption {
+            font-family: Arial, sans-serif;
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 8px;
+            text-align: left;
+        }
+
+        /* Cuerpo del texto */
+        .article-content p {
+            margin-bottom: 25px;
+            font-size: 1.25rem;
+        }
+
+        .lead {
+            font-weight: bold;
+            font-size: 1.4rem !important;
+            color: #333;
+        }
+
+        blockquote {
+            border-left: 5px solid var(--accent-color);
+            padding: 20px 30px;
+            margin: 40px 0;
+            font-style: italic;
+            color: #444;
+            background: #f9f9f9;
+            font-size: 1.3rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f4f4f4;
+            margin-top: 60px;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Adaptabilidad para móviles */
+        @media (max-width: 600px) {
+            .article-header h1 {
+                font-size: 2rem;
+            }
+            header {
+                padding: 1rem 5%;
+            }
+            nav {
+                display: none; /* Oculta menú en móvil para este ejemplo */
+            }
+        }
+    </style>
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <a href="index.html" style="color: white; text-decoration: none;"><h1>Noticias Express</h1></a>
+            <h1>Noticias Express</h1>
         </div>
         <nav>
-            <ul class="nav-links">
-                <li><a href="#">Internacional</a></li>
-                <li><a href="#">Seguridad</a></li>
-                <li><a href="#">Últimas Noticias</a></li>
+            <ul>
+                <li><a href="#">Sucesos</a></li>
+                <li><a href="#">Política</a></li>
+                <li><a href="#">Mundo</a></li>
             </ul>
         </nav>
     </header>
 
     <article class="article-container">
         <header class="article-header">
-            <span class="category-tag">Seguridad</span>
+            <span class="category-tag">Último Minuto</span>
             <h1>Frustran una masacre: Detienen a un hombre armado antes de ingresar a un centro comercial</h1>
-            <p class="article-meta">Por **Redacción Noticias Express** | Publicado el 8 de mayo de 2026</p>
+            <p class="article-meta">Por <strong>Javier Méndez</strong> | Publicado el 8 de mayo de 2026</p>
         </header>
 
-        <img src="img/operativo-policial.jpg" alt="Operativo policial en la escena" class="main-image">
+        <div class="image-wrapper">
+            <!-- Reemplaza "img/policia.jpg" con tu archivo local -->
+            <img src="https://placehold.co/1200x700/333/fff?text=Operativo+Policial+en+Escena" alt="Policía en la escena" class="main-image">
+            <p class="image-caption">Agentes de la unidad táctica resguardan el perímetro tras la detención del sospechoso.</p>
+        </div>
 
         <div class="article-content">
             <p class="lead">
-                Una tragedia de proporciones mayores fue evitada esta tarde gracias a la rápida intervención de las fuerzas de seguridad y la alerta temprana de un ciudadano.
+                Una tragedia de proporciones mayores fue evitada esta tarde gracias a la rápida intervención de las fuerzas de seguridad y la alerta temprana de un ciudadano anónimo.
             </p>
 
             <p>
-                Cerca de las 14:30 horas, las autoridades recibieron un reporte sobre un individuo que portaba un arma larga en el estacionamiento del centro comercial "Plaza Norte". Según los primeros informes, el sospechoso se dirigía hacia la entrada principal con intenciones de abrir fuego.
+                Cerca de las 14:30 horas de este viernes, las autoridades locales recibieron un reporte de emergencia sobre un individuo que portaba un arma larga en el estacionamiento del concurrido centro comercial <strong>"Plaza Norte"</strong>. Según testigos, el sospechoso caminaba con determinación hacia la entrada principal.
             </p>
 
             <p>
-                Agentes de la unidad de respuesta rápida que se encontraban patrullando la zona lograron interceptar al sujeto apenas unos metros antes de que cruzara las puertas automáticas. Tras una breve persecución a pie, el individuo fue reducido sin que se efectuara un solo disparo.
+                Agentes de la patrulla urbana, que se encontraban a escasos dos minutos del lugar, lograron interceptar al sujeto antes de que lograra cruzar las puertas automáticas del establecimiento. El sospechoso, cuya identidad no ha sido revelada, fue reducido mediante tácticas de desescalada sin que se registraran disparos ni heridos.
             </p>
 
             <blockquote>
-                "La coordinación entre la denuncia ciudadana y nuestro equipo de respuesta evitó lo que pudo ser un día oscuro para nuestra comunidad", declaró el jefe de policía local en rueda de prensa.
+                "El tiempo de respuesta fue vital. Estamos hablando de una intervención que salvó decenas de vidas en cuestión de segundos", señaló el comisario general durante una breve declaración a los medios.
+            </blockquote>
+
+            <p>
+                Tras la detención, los equipos de especialistas en explosivos registraron el vehículo del sospechoso, donde se encontraron varios cargadores de alta capacidad y una nota con planes detallados sobre el ataque. La zona permanece acordonada mientras se completa la investigación.
             </p>
 
             <p>
-                En el vehículo del detenido se hallaron municiones adicionales y material propagandístico que ya está siendo analizado por las unidades de inteligencia. Hasta el momento, el centro comercial permanece cerrado mientras se realizan los peritajes correspondientes.
+                El centro comercial ha emitido un comunicado agradeciendo la labor policial y anunciando que reabrirá sus puertas el día de mañana bajo estrictos protocolos de seguridad reforzados.
             </p>
         </div>
     </article>
 
     <footer>
-        <p>&copy; 2026 Noticias Express. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Noticias Express - Periodismo en Tiempo Real.</p>
+        <p>Prohibida la reproducción total o parcial de este contenido.</p>
     </footer>
 
+    <!-- JAVASCRIPT INTEGRADO -->
+    <script>
+        // Función simple para avisar que la noticia está actualizada
+        window.onload = () => {
+            console.log("Artículo cargado correctamente. Estado: Actualizado.");
+        };
+    </script>
 </body>
 </html>
