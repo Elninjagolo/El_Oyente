@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> | Diario El Oyente</title>
+    <title>Diario El Oyente</title>
     
-    <!-- CSS: Estilos de la página -->
     <style>
         :root {
             --primary-color: #1a1a1a;   /* Negro periódico */
@@ -38,6 +37,18 @@
             align-items: center;
             font-family: Arial, sans-serif;
             border-bottom: 4px solid var(--accent-color);
+        }
+
+        /* MODIFICACIÓN AQUÍ: Contenedor del logo y nombre */
+        .logo {
+            display: flex;         /* Alinea imagen y h1 en línea */
+            align-items: center;    /* Centra verticalmente ambos */
+            gap: 15px;              /* Espacio entre logo y texto */
+        }
+
+        .logo img {
+            height: 40px;           /* Ajusta el tamaño de tu logo */
+            width: auto;
         }
 
         .logo h1 {
@@ -98,7 +109,6 @@
             margin-bottom: 30px;
         }
 
-        /* Imágenes */
         .image-wrapper {
             margin-bottom: 30px;
         }
@@ -118,7 +128,6 @@
             margin-top: 8px;
         }
 
-        /* Contenido de texto */
         .article-content p {
             margin-bottom: 25px;
             font-size: 1.25rem;
@@ -140,7 +149,6 @@
             font-size: 1.3rem;
         }
 
-        /* --- PIE DE PÁGINA --- */
         footer {
             text-align: center;
             padding: 50px 20px;
@@ -151,9 +159,9 @@
             color: #666;
         }
 
-        /* --- DISEÑO RESPONSIVO (MÓVILES) --- */
         @media (max-width: 600px) {
-            header { padding: 1rem 5%; flex-direction: column; gap: 10px; }
+            header { padding: 1rem 5%; flex-direction: column; gap: 15px; }
+            .logo { justify-content: center; } /* Centra logo en móviles */
             .article-header h1 { font-size: 2rem; }
             .article-container { margin: 20px auto; }
             nav ul { font-size: 0.8rem; }
@@ -162,9 +170,9 @@
 </head>
 <body>
 
-    <!-- ESTRUCTURA HTML -->
     <header>
         <div class="logo">
+            <!-- El logo ahora está a la izquierda del h1 -->
             <img src="1000198240.png" alt="loguito">
             <h1>Diario El Oyente</h1>
         </div>
@@ -180,38 +188,29 @@
     <article class="article-container">
         <header class="article-header">
             <span class="category-tag">Última Hora</span>
-            <h1></h1>
+            <h1>Tensión en centro educativo de Montevideo</h1>
             <p class="article-meta">Por <strong>Redacción Noticias Express</strong> | Publicado el 8 de mayo de 2026</p>
         </header>
 
         <div class="image-wrapper">
-            <!-- NOTA: Reemplaza este enlace por el nombre de tu foto local si lo prefieres -->
-            <img src="l18.jpg" alt="Policía en la escena" class="main-image">
+            <img src="l18.jpg" alt="Liceo 18" class="main-image">
             <p class="image-caption">Liceo N°18 Montevideo/Uruguay.</p>
         </div>
 
         <div class="article-content">
             <p class="lead">
-                Momentos de tensión se vivieron este jueves en un centro estudiantil de Montevideo, cuando tres jóvenes armados ingresaron al edificio y comenzaron a amenazar a los estudiantes que se encontraban en el lugar. Según testigos, los individuos exhibieron armas de fuego y recorrieron distintas zonas del centro mientras intimidaban verbalmente a varias personas.
+                Momentos de tensión se vivieron este jueves en un centro estudiantil de Montevideo, cuando tres jóvenes armados ingresaron al edificio y comenzaron a amenazar a los estudiantes.
             </p>
             <p>
-A pesar del miedo generado entre los presentes, no se registraron disparos ni heridos. Algunos estudiantes lograron esconderse en salones y oficinas mientras otros abandonaban el edificio rápidamente para ponerse a salvo.
-</p>
-            <p>
-La situación fue advertida por una persona que observó los movimientos sospechosos desde las inmediaciones del centro y dio aviso inmediato a la Policía. Minutos después, varios móviles llegaron al lugar y los efectivos intentaron interceptar a los sospechosos.
+                A pesar del miedo generado entre los presentes, no se registraron disparos ni heridos. Algunos estudiantes lograron esconderse en salones y oficinas mientras otros abandonaban el edificio rápidamente para ponerse a salvo.
             </p>
-            <p>
-Al notar la presencia policial, los tres jóvenes escaparon corriendo por las calles cercanas, lo que dio inicio a una breve persecución. Finalmente, uno de ellos fue detenido por los agentes a pocas cuadras del lugar, mientras que los otros dos lograron huir en una motocicleta.
-</p>
-            <p>
-La Policía trabaja ahora en la identificación de los prófugos y analiza cámaras de seguridad de la zona para esclarecer lo ocurrido. El hecho generó preocupación entre estudiantes, familias y autoridades educativas, especialmente debido al reciente aumento de amenazas relacionadas con centros de estudio en el país.            </p>
-</p>
+            
             <blockquote>
-                "La coordinación entre la denuncia ciudadana y nuestro equipo de respuesta evitó lo que pudo ser un día trágico para cientos de familias", declaró el jefe de policía en rueda de prensa.
+                "La coordinación entre la denuncia ciudadana y nuestro equipo de respuesta evitó lo que pudo ser un día trágico para cientos de familias", declaró el jefe de policía.
             </blockquote>
 
             <p>
-                En la inspección posterior de su vehículo, se hallaron múltiples cargadores y planes escritos que ya están bajo análisis de inteligencia. El centro comercial se mantiene cerrado temporalmente para facilitar las investigaciones.
+                La Policía trabaja ahora en la identificación de los prófugos y analiza cámaras de seguridad de la zona para esclarecer lo ocurrido.
             </p>
         </div>
     </article>
@@ -221,16 +220,9 @@ La Policía trabaja ahora en la identificación de los prófugos y analiza cáma
         <p>Todos los derechos reservados.</p>
     </footer>
 
-    <!-- JAVASCRIPT: Funcionalidad -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             console.log("Sistema de noticias cargado correctamente.");
-            
-            // Ejemplo de funcionalidad: Mostrar una pequeña alerta de 'Última Hora' al entrar
-            setTimeout(() => {
-                const confirms = confirm("¿Deseas recibir notificaciones sobre el desarrollo de esta noticia?");
-                if(confirms) console.log("Usuario aceptó notificaciones.");
-            }, 2000);
         });
     </script>
 </body>
