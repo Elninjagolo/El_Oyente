@@ -33,26 +33,30 @@
             color: white;
             padding: 1rem 10%;
             display: flex;
-            justify-content: space-between;
+            /* CAMBIO: Alinea todo el contenido al inicio (izquierda) */
+            justify-content: flex-start; 
             align-items: center;
             font-family: Arial, sans-serif;
             border-bottom: 4px solid var(--accent-color);
+            /* Espacio entre el bloque del logo y el menú de navegación */
+            gap: 40px; 
         }
 
-        /* MODIFICACIÓN AQUÍ: Contenedor del logo y nombre */
         .logo {
-            display: flex;         /* Alinea imagen y h1 en línea */
-            align-items: center;    /* Centra verticalmente ambos */
-            gap: 15px;              /* Espacio entre logo y texto */
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
         .logo img {
-            height: 40px;           /* Ajusta el tamaño de tu logo */
+            /* CAMBIO: Logo más grande (ajustado de 40px a 65px) */
+            height: 65px; 
             width: auto;
         }
 
         .logo h1 {
-            font-size: 1.5rem;
+            /* Ajuste ligero del tamaño de fuente para equilibrar con el logo */
+            font-size: 1.8rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -160,8 +164,8 @@
         }
 
         @media (max-width: 600px) {
-            header { padding: 1rem 5%; flex-direction: column; gap: 15px; }
-            .logo { justify-content: center; } /* Centra logo en móviles */
+            header { padding: 1rem 5%; flex-direction: column; gap: 15px; text-align: center; }
+            .logo { justify-content: center; }
             .article-header h1 { font-size: 2rem; }
             .article-container { margin: 20px auto; }
             nav ul { font-size: 0.8rem; }
@@ -172,7 +176,6 @@
 
     <header>
         <div class="logo">
-            <!-- El logo ahora está a la izquierda del h1 -->
             <img src="1000198241.png" alt="loguito">
             <h1>Diario El Oyente</h1>
         </div>
