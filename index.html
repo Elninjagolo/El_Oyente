@@ -7,10 +7,10 @@
     
     <style>
         :root {
-            --primary-color: #1a1a1a;   /* Negro periódico */
-            --accent-color: #d32f2f;    /* Rojo alerta */
-            --text-main: #222;          /* Texto principal */
-            --text-meta: #666;          /* Texto secundario */
+            --primary-color: #1a1a1a;
+            --accent-color: #d32f2f;
+            --text-main: #222;
+            --text-meta: #666;
             --bg-body: #ffffff;
         }
 
@@ -33,32 +33,31 @@
             color: white;
             padding: 1rem 10%;
             display: flex;
-            /* CAMBIO: Alinea todo el contenido al inicio (izquierda) */
             justify-content: flex-start; 
             align-items: center;
             font-family: Arial, sans-serif;
             border-bottom: 4px solid var(--accent-color);
-            /* Espacio entre el bloque del logo y el menú de navegación */
-            gap: 40px; 
+            gap: 50px; /* Un poco más de espacio por el nuevo tamaño */
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
         }
 
         .logo img {
-            /* CAMBIO: Logo más grande (ajustado de 40px a 65px) */
-            height: 65px; 
+            /* LOGO MÁS GRANDE: Subido a 90px */
+            height: 90px; 
             width: auto;
+            transition: 0.3s;
         }
 
         .logo h1 {
-            /* Ajuste ligero del tamaño de fuente para equilibrar con el logo */
-            font-size: 1.8rem;
+            /* Título ajustado para acompañar el tamaño del logo */
+            font-size: 2.2rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         nav ul {
@@ -70,7 +69,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 1rem;
             transition: 0.3s;
         }
 
@@ -122,7 +121,6 @@
             height: auto;
             border-radius: 4px;
             display: block;
-            background-color: #eee;
         }
 
         .image-caption {
@@ -135,12 +133,6 @@
         .article-content p {
             margin-bottom: 25px;
             font-size: 1.25rem;
-        }
-
-        .lead {
-            font-weight: bold;
-            font-size: 1.4rem !important;
-            color: #333;
         }
 
         blockquote {
@@ -164,11 +156,10 @@
         }
 
         @media (max-width: 600px) {
-            header { padding: 1rem 5%; flex-direction: column; gap: 15px; text-align: center; }
-            .logo { justify-content: center; }
-            .article-header h1 { font-size: 2rem; }
-            .article-container { margin: 20px auto; }
-            nav ul { font-size: 0.8rem; }
+            header { padding: 1.5rem 5%; flex-direction: column; gap: 20px; }
+            .logo { flex-direction: column; text-align: center; }
+            .logo img { height: 70px; } /* Un poco más pequeño en móviles */
+            .logo h1 { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -201,7 +192,7 @@
         </div>
 
         <div class="article-content">
-            <p class="lead">
+            <p class="lead" style="font-weight: bold; font-size: 1.4rem; color: #333;">
                 Momentos de tensión se vivieron este jueves en un centro estudiantil de Montevideo, cuando tres jóvenes armados ingresaron al edificio y comenzaron a amenazar a los estudiantes.
             </p>
             <p>
@@ -211,22 +202,12 @@
             <blockquote>
                 "La coordinación entre la denuncia ciudadana y nuestro equipo de respuesta evitó lo que pudo ser un día trágico para cientos de familias", declaró el jefe de policía.
             </blockquote>
-
-            <p>
-                La Policía trabaja ahora en la identificación de los prófugos y analiza cámaras de seguridad de la zona para esclarecer lo ocurrido.
-            </p>
         </div>
     </article>
 
     <footer>
         <p>&copy; 2026 Noticias Express - Periodismo Independiente.</p>
-        <p>Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log("Sistema de noticias cargado correctamente.");
-        });
-    </script>
 </body>
 </html>
