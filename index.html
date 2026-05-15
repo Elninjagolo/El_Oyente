@@ -9,9 +9,10 @@
         :root {
             --primary-color: #1a1a1a;
             --accent-color: #d32f2f;
-            --text-main: #222;
+            --text-main: #333;
             --text-meta: #666;
             --bg-body: #ffffff;
+            --headline-color: #111; /* Negro suave profesional */
         }
 
         * {
@@ -31,43 +32,44 @@
         header {
             background-color: var(--primary-color);
             color: white;
-            padding: 1rem 10%;
+            padding: 1.5rem 10%;
             display: flex;
             justify-content: flex-start; 
             align-items: center;
             font-family: Arial, sans-serif;
-            border-bottom: 4px solid var(--accent-color);
-            gap: 50px;
+            border-bottom: 5px solid var(--accent-color);
+            gap: 40px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
         }
 
         .logo img {
-            height: 120px; 
+            height: 100px; 
             width: auto;
-            transition: 0.3s;
         }
 
         .logo h1 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             text-transform: uppercase;
             letter-spacing: 2px;
+            font-weight: 900;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-size: 1rem;
+            font-weight: bold;
             transition: 0.3s;
         }
 
@@ -77,41 +79,46 @@
 
         /* --- CUERPO DEL ARTÍCULO --- */
         .article-container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 850px;
+            margin: 60px auto;
+            padding: 0 30px;
         }
 
         .category-tag {
             background-color: var(--accent-color);
             color: white;
-            padding: 4px 10px;
-            font-size: 0.8rem;
+            padding: 6px 14px;
+            font-size: 0.85rem;
             font-family: Arial, sans-serif;
             text-transform: uppercase;
             font-weight: bold;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
+            border-radius: 2px;
         }
 
+        /* TITULAR CORREGIDO */
         .article-header h1 {
-            font-size: 2.8rem;
-            line-height: 1.1;
+            font-size: 3.4rem; 
+            line-height: 1.15; 
+            color: var(--headline-color);
+            letter-spacing: -1.5px;
             margin-bottom: 20px;
-            color: #000;
+            font-weight: 800;
         }
 
         .article-meta {
             font-family: Arial, sans-serif;
             color: var(--text-meta);
-            font-size: 0.9rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-            margin-bottom: 30px;
+            font-size: 1rem;
+            border-bottom: 2px solid #eeeeee;
+            padding-bottom: 25px;
+            margin-bottom: 40px;
         }
 
+        /* IMAGEN Y DISTRIBUCIÓN */
         .image-wrapper {
-            margin-bottom: 30px;
+            margin-bottom: 45px;
         }
 
         .main-image {
@@ -119,45 +126,66 @@
             height: auto;
             border-radius: 4px;
             display: block;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .image-caption {
             font-family: Arial, sans-serif;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             color: #777;
-            margin-top: 8px;
+            margin-top: 15px;
+            font-style: italic;
+            border-left: 4px solid #ddd;
+            padding-left: 15px;
         }
 
+        /* TEXTO DE LA NOTICIA */
         .article-content p {
-            margin-bottom: 25px;
-            font-size: 1.25rem;
+            margin-bottom: 30px;
+            font-size: 1.35rem;
+            color: #2c2c2c;
+            text-align: left;
+        }
+
+        .lead {
+            font-weight: bold;
+            font-size: 1.55rem !important;
+            color: #111 !important;
+            line-height: 1.6;
         }
 
         blockquote {
-            border-left: 5px solid var(--accent-color);
-            padding: 20px 30px;
-            margin: 40px 0;
+            border-left: 6px solid var(--accent-color);
+            padding: 30px 40px;
+            margin: 50px 0;
             font-style: italic;
             color: #444;
-            background: #f9f9f9;
-            font-size: 1.3rem;
+            background: #fdfdfd;
+            font-size: 1.45rem;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
         }
 
+        /* --- PIE DE PÁGINA --- */
         footer {
             text-align: center;
-            padding: 50px 20px;
-            background: #f4f4f4;
-            margin-top: 60px;
+            padding: 70px 20px;
+            background: #111;
+            margin-top: 100px;
             font-family: Arial, sans-serif;
-            font-size: 0.9rem;
-            color: #666;
+            color: #999;
         }
 
-        @media (max-width: 600px) {
-            header { padding: 1.5rem 5%; flex-direction: column; gap: 20px; }
-            .logo { flex-direction: column; text-align: center; }
-            .logo img { height: 70px; }
-            .logo h1 { font-size: 1.5rem; }
+        footer strong {
+            color: #fff;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            header { padding: 2rem 5%; flex-direction: column; text-align: center; gap: 20px; }
+            .article-header h1 { font-size: 2.4rem; }
+            .logo img { height: 80px; }
+            .article-container { margin: 30px auto; padding: 0 20px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -165,7 +193,8 @@
 
     <header>
         <div class="logo">
-            <img src="logologuito.png" alt="loguito">
+            <!-- Reemplaza logologuito.png con tu archivo local -->
+            <img src="logologuito.png" alt="Logo Diario El Oyente">
             <h1>Diario El Oyente</h1>
         </div>
         <nav>
@@ -179,18 +208,19 @@
 
     <article class="article-container">
         <header class="article-header">
-            <span class="category-tag">Última Hora</span>
-            <h1>Inseguridad: Tres jóvenes armados irrumpen en un centro educativo de Montevideo</h1>
-            <p class="article-meta">Por <strong>Redacción Diario El Oyente</strong> | Publicado el 15 de mayo de 2026</p>
+            <span class="category-tag">Seguridad Ciudadana</span>
+            <h1>Tensión en un centro educativo de Montevideo tras ingreso de jóvenes armados</h1>
+            <p class="article-meta">Por <strong>Redacción Diario El Oyente</strong> | Publicado el 15 de Mayo, 2026</p>
         </header>
 
         <div class="image-wrapper">
-            <img src="l18.jpg" alt="Liceo 18" class="main-image">
-            <p class="image-caption">Fachada del centro educativo en Montevideo donde ocurrieron los hechos.</p>
+            <!-- Reemplaza l18.jpg con tu archivo local -->
+            <img src="l18.jpg" alt="Liceo N°18 Montevideo" class="main-image">
+            <p class="image-caption">Fachada del centro educativo en Montevideo donde se registraron los momentos de tensión este jueves.</p>
         </div>
 
         <div class="article-content">
-            <p class="lead" style="font-weight: bold; font-size: 1.4rem; color: #333;">
+            <p class="lead">
                 Momentos de tensión se vivieron este jueves en un centro estudiantil de Montevideo, cuando tres jóvenes armados ingresaron al edificio y comenzaron a amenazar a los estudiantes que se encontraban en el lugar.
             </p>
 
@@ -203,11 +233,11 @@
             </p>
 
             <blockquote>
-                "La rápida intervención policial fue clave para evitar que la situación escalara, en un hecho que generó profunda preocupación en toda la comunidad educativa", señalaron fuentes del caso.
+                "Vimos a los sujetos entrar con total impunidad. El pánico fue inmediato, pero la respuesta de los protocolos internos ayudó a que muchos pudieran refugiarse rápidamente", comentó una fuente cercana al centro.
             </blockquote>
 
             <p>
-                Minutos después del reporte, varios móviles llegaron al lugar y los efectivos intentaron interceptar a los sospechosos. Al notar la presencia policial, los tres jóvenes escaparon corriendo por las calles cercanas, lo que dio inicio a una breve persecución. 
+                Minutos después del aviso, varios móviles llegaron al lugar y los efectivos intentaron interceptar a los sospechosos. Al notar la presencia policial, los tres jóvenes escaparon corriendo por las calles cercanas, lo que dio inicio a una breve persecución.
             </p>
 
             <p>
@@ -221,7 +251,8 @@
     </article>
 
     <footer>
-        <p>&copy; 2026 Diario El Oyente - Periodismo Independiente desde Montevideo.</p>
+        <p><strong>&copy; 2026 Diario El Oyente</strong> - Todos los derechos reservados.</p>
+        <p style="margin-top: 10px; font-size: 0.85rem;">Periodismo independiente y veraz | Montevideo, Uruguay</p>
     </footer>
 
 </body>
